@@ -349,3 +349,34 @@ const newMapSrc = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3778.03
 changeMapLocation(newMapSrc);
 
 // JavaScript to dynamically add the Map Location Section to the HTML ends
+
+  //  accordion starts here
+
+  // let accordion = document.querySelectorAll('.faq .accordion-container .accordion');
+
+  // accordion.forEach(acco => {
+  //     acco.onclick = () => {
+  //         accordion.forEach(remove => remove.classList.remove('active'));
+  //         acco.classList.add('active');
+  //     }
+  // });
+
+// accordion ends 
+
+  // accordion starts here
+  let accordion = document.querySelectorAll('.faq .accordion-container .accordion');
+
+  accordion.forEach(acco => {
+      acco.querySelector('.accordion-heading').onclick = () => {
+          // Toggle active class to open/close accordion
+          acco.classList.toggle('active');
+          
+          // Collapse other accordion items when one is clicked
+          accordion.forEach(otherAcco => {
+              if (otherAcco !== acco) {
+                  otherAcco.classList.remove('active');
+              }
+          });
+      }
+  });
+  // accordion ends here
