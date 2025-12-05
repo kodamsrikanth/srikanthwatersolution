@@ -61,12 +61,25 @@ section{
 /* header section starts */
 .header {
   position: fixed;
-  position: relative;
+  position: -webkit-sticky;
   top: 0;
   left: 0;
   right: 0;
   z-index: 2000;
   box-shadow: var(--box-shadow);
+  background-color: #fff;
+   /* Add this to prevent transparency when scrolling */
+
+       /* width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top:0; left: 0;
+    padding:0 2rem;
+    background:#444;
+    z-index: 1000;
+    box-shadow: 0 .1rem .3rem rgba(0,0,0,.3); */
 }
 
 .header .navbar.nav-1 .flex {
@@ -207,7 +220,6 @@ header .logo img {
   display: none;
 }
 
-/* header section ends */
 
 /* search-btn-container starts here */
 
@@ -702,13 +714,24 @@ text-align: center;
 
 /* ro-service-popup section ends here */
 
-/* header-water-purifiers section ends here */
-
 .header-water-purifiers {
-  padding: 2rem 0%;
+  padding: 17rem 0%;
   padding-right: 0;
   padding-bottom: 0;
+
+
+      /* min-height: 100vh;
+    background:url(../images/home.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding:1rem 2rem;
+    padding-top: 6rem; */
 }
+
 
 .header-water-purifiers .slide .image {
   width: 100%;
@@ -734,7 +757,7 @@ text-align: center;
   width: 14%; 
 }
 
-.header-water-purifiers .swiper-slide:nth-child(2n) {
+/* .header-water-purifiers .swiper-slide:nth-child(2n) {
   scroll-behavior: smooth;
   width: 14%; 
 }
@@ -757,37 +780,9 @@ text-align: center;
 .header-water-purifiers .swiper-slide:nth-child(6n) {
   scroll-behavior: smooth;
   width: 14%; 
-}
+} */
 
-/* header-water-purifiers section ends here */
-
-/* more-purifier btn section starts   */
-
-.more-purifier-btn {
-  text-align: center;
-  /* background-color: red; */
-  padding: 1rem 0%;
-}
-
-.more-purifier-btn .btn {
-  display: inline-block;
-  padding: .7rem 3rem;
-  border-radius: 5rem;
-  /* border: .5rem solid var(--main-color); */
-  color: black;
-  cursor: pointer;
-  font-size: 2rem;
-  font-weight: bolder;
-  background-color: greenyellow;
-}
-
-.more-purifier-btn .btn:hover {
-  transform: scale(1.1);
-  background-color: var(--main-color);
-  color: var(--white);
-}
-
-/* more-purifier btn section ends   */
+/* header-water-purifiers section ends here */  
 
 /* water-purifier-section section starts  */
 
@@ -824,57 +819,61 @@ text-align: center;
   text-transform: capitalize;
   text-align: left;
   line-height: 1.3;
+  font-size: 3rem;
 }
 
 .contact-information .location-details {
   text-align: left;
+  border-top: 0.5rem solid var(--main-color);
 }
 
-.contact-information .location-details .price-info {
+/* .contact-information .location-details .contact-us {
   display: flex;
   align-items: center;
   justify-content: space-between;
   border-top: var(--border);
-}
+} */
 
-.contact-information .location-details .price-info .price {
-  color: var(--blue);
-  font-size: 6rem;
-}
-
-.contact-information .location-details .price-info .price span {
-  color: var(--black);
-  font-size: 2rem;
-  text-decoration: line-through;
-}
-
-.contact-information .location-details .contact-us {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border-top: var(--border);
-}
-
-.contact-information .location-details .contact-us .price {
+.contact-information .location-details .price {
   color: var(--black);
   font-size: 2.8rem;
+  border-top: var(--border);
 }
 
 
 .contact-information .location-details .buttons {
+  padding: 0rem 0;
   display: flex;
   flex-wrap: wrap;
-}
+  justify-content: center; /* horizontally center */
+  align-items: center; /* vertically center */
+  
 
+}
 
 .contact-information .location-details .buttons p{
 font-weight: 900;
-color: var(--main-color);
+color: var(--white);
+font-size: 3rem;
+background-color: var(--main-color);
+padding: 0.2rem 1rem;
+/* border: var(--border);
+border-top: none; */
 }
 
 .contact-information .location-details .buttons p:hover{
-text-decoration: underline;
+background-color: var(--white);
+color: var(--black);
+border: var(--black);
+border-top: none;
   }
+
+.contact-information .location-details h2 {
+  font-size: 2.2rem;
+  color: var(--black);
+  /* font-weight: 900; */
+}
+
 .contact-information .location-details p {
   font-size: 1.8rem;
   color: var(--black);
@@ -919,6 +918,7 @@ text-decoration: underline;
 
 .social-media-buttons {
   text-align: center;
+  padding-bottom: 0.8rem;
 }
 
 .social-media-buttons a {
@@ -933,10 +933,49 @@ text-decoration: underline;
   text-align: center;
 }
 
-.social-media-buttons a:hover {
-  background: var(--main-color);
+/* .social-media-buttons a:hover {
+  background: #007AFF;
   color: #fff;
+  box-shadow: 0 1rem 1.5rem rgba(0,0,0,.3)
+} */
+
+/* Each platform’s color */
+.social-media-buttons .fa-phone:hover {
+  background-color: #007AFF;
+  color: #fff;
+  box-shadow: 0 1rem 1.5rem rgba(0,0,0,.3);
+  border: none;
 }
+
+.social-media-buttons .fa-whatsapp:hover {
+  background-color: #25D366;
+  color: #fff;
+  box-shadow: 0 1rem 1.5rem rgba(0,0,0,.3);
+  border: none;
+}
+
+.social-media-buttons .fa-facebook-f:hover {
+  background-color: #1877F2;
+  color: #fff;
+  box-shadow: 0 1rem 1.5rem rgba(0,0,0,.3);
+  border: none;
+}
+
+.social-media-buttons .fa-instagram:hover {
+  background: linear-gradient(45deg, #F58529, #DD2A7B, #8134AF, #515BD4);
+  color: #fff;
+  box-shadow: 0 1rem 1.5rem rgba(0,0,0,.3);
+  border: none;
+}
+
+.social-media-buttons .fa-youtube:hover {
+  background-color: #FF0000;
+  color: #fff;
+  box-shadow: 0 1rem 1.5rem rgba(0,0,0,.3);
+  border: none;
+}
+
+
 
 .social-media-buttons a p {
   font-size: 1.5rem;
@@ -950,9 +989,9 @@ text-decoration: underline;
   font-size: 1.6rem;
 }
 
+
 .contact-information h3 {
   font-size: 3rem;
-  text-transform: none;
   color: var(--black);
 }
 
@@ -962,54 +1001,13 @@ text-decoration: underline;
   text-align: center;
 }
 
-.contact-information .buttons .btn {
+/* .contact-information .buttons .btn {
   flex: 1;
   font-size: 1.5rem;
-}
+} */
 
 /* water-purifier-section section ends */
 
-/* category section starts here */
-
-/* .category {
-  background-color: red;
-  } */
-
-  .category .box-container {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: (minmax(32rem, 1fr))[auto-fit];
-    grid-template-columns: repeat(auto-fit, minmax(12rem, 2fr));
-    gap: 0.5rem;
-    max-width: 65rem;
-    margin: 1rem auto;
-  }
-  
-  .category .box-container .box {
-    text-align: center;
-  
-  }
-  
-  .category .box-container .box img {
-    height: 10rem;
-    width: 10rem;
-  }
-  
-  .category .box-container .box h1 {
-    font-size: 1.5rem;
-    color: rgb(25, 0, 251);
-    cursor: pointer;
-    line-height: 1.2;
-  
-  }
-  
-  .category .box-container .box h1:hover {
-    text-decoration: underline;
-    cursor: pointer;
-  }
-
-  /* category section ends here */
-  
 /* products section starts here */
 
 .ro-water-purifiers-heading {
@@ -1071,17 +1069,18 @@ text-decoration: underline;
 
 .ro-water-purifiers .box-container .box .info h3 {
   padding: 0 0.5rem;
-  font-size: 2rem;
+  font-size: 1.8rem;
   color: var(--blue);
   line-height: 1.2;
 }
 
 .ro-water-purifiers .box-container .box .info p {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   color: var(--black);
   line-height: 1.4;
   padding: 0 0.5rem;
 }
+
 
 
 .ro-water-purifiers .box-container .box .info .subInfo {
@@ -1133,6 +1132,21 @@ text-decoration: underline;
 /* recommanded water purifiers ends starts */
 
 /* service-category section starts here */
+.water-purifier-spare-parts-heading {
+  text-align: center;
+  justify-content: center;
+  padding-bottom: 2rem;
+}
+
+.water-purifier-spare-parts-heading span {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  color: var(--white);
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  border: var(--border);
+  background-color: var(--main-color);
+}
 
 .service-category {
   padding: 2rem 2%; 
@@ -1288,7 +1302,7 @@ text-decoration: underline;
 }
 
 .google-map {
-  height: 40rem;
+  height: 25rem;
   width: 100%;
 }
 
@@ -1355,69 +1369,170 @@ text-decoration: underline;
 
 
 
+/* faq section starts   */
 
-.faq .accordion-container{
-  max-width: 70rem;
-  margin:0 auto;
+/* .faq {
+    padding: 2rem 10%;
+  } */
+
+.faq .content-16 {
+    text-align: center;
 }
 
-.faq .accordion-container .accordion{
-  /* margin:1.5rem 0; */
-  margin:1.5rem 0;
-  /* box-shadow: var(--box-shadow); */
-  border: var(--border);
+.faq .content-16 h3 {
+    font-size: 4rem;
+    color: #200101;
+    padding-top: 0.5rem;
+
 }
 
-.faq .accordion-container .accordion .accordion-heading{
-  /* padding:1.5rem; */
-  padding: 0.6rem;
-  /* background: var(--black); */
-  background-color: var(--main-color);
-  color:var(--white);
-  cursor: pointer;
-  font-size: 2rem;
-  font-weight: 900;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap:1.5rem;
+.faq .content-16 p {
+    font-size: 2.2rem;
+    color: #200101;
+    padding-top: 0.5rem;
 }
 
-.faq .accordion-container .accordion .accrodion-content{
-  padding:2rem;
-  background-color: var(--white);
-  line-height: 1.2;
-  color:var(--light-color);
-  font-size: 1.6rem;
-  display: none;
+.faq .accordion-container {
+    margin: 0 auto;
 }
 
-.faq .accordion-container .accordion.active .accrodion-content{
-  display: inline-block;
+.faq .accordion-container .accordion {
+    margin: 0.8rem 0;
 }
 
-.faq .accordion-container .accordion.active .accordion-heading{
-  background: var(--main-color);
+.faq .accordion-container .accordion .accordion-heading {
+    padding: 1rem;
+    /* background: #021132; */
+    background: var(--main-color);
+    color: #fff;
+    cursor: pointer;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
 }
 
-.faq .accordion-container .accordion.active .accordion-heading i{
-  transform: rotate(180deg);
+.faq .accordion-container .accordion .accordion-heading span {
+    font-family: 'Nunito Sans', sans-serif;
+    color: #fff;
 }
 
-/* Make the entire question line bold */
-.faq .accordion-container .accordion .accrodion-content strong {
-  font-weight: 900; /* Full bold */
-  display: block; /* Ensure it appears on a separate line */
+.faq .accordion-container .accordion .accrodion-content {
+    padding: 1rem 1rem;
+    line-height: 1.2;
+    color: #0d0000;
+    font-size: 2rem;
+    display: none;
+    font-family: 'Nunito Sans', sans-serif;
+    ;
 }
 
-/* Keep the answer in normal weight */
-.faq .accordion-container .accordion .accrodion-content span {
-  font-weight: 400; /* Normal text */
-  display: block; /* Ensure answer appears below the question */
-  margin-top: 0.3rem; /* Add slight spacing */
+.faq .accordion-container .accordion.active .accrodion-content {
+    display: inline-block;
+}
+
+.faq .accordion-container .accordion.active .accordion-heading {
+    background: #021132;
+
+}
+
+.faq .accordion-container .accordion.active .accordion-heading i {
+    transform: rotate(180deg);
+    color: #fff;
 }
 
 
+.faq .content-15 {
+    text-align: center;
+}
+
+.faq .content-15 p {
+    font-size: 2rem;
+    color: #200101;
+    padding-top: 0.5rem;
+    font-weight: 900;
+}
+
+.faq .content-15 p .line-13 {
+    font-size: 2rem;
+    color: #fb9005;
+    font-weight: 900;
+}
+
+.faq .content-15 .para-14 {
+    font-size: 2rem;
+    color: #111;
+}
+
+.faq .content-15 .para-14 .line-14 {
+    font-size: 2rem;
+    color: #fbce05;
+    font-weight: 900;
+}
+
+
+.btn-container-16 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-position: center;
+}
+
+.btn-container-16 .btn-16 h3 {
+    color: #fff;
+    font-size: 3rem;
+    font-family: 'Nunito', sans-serif;
+    line-height: 1;
+}
+
+.btn-container-16 .btn-16 p {
+    color: #fff;
+    font-size: 1.7rem;
+    font-family: 'Nunito', sans-serif;
+}
+
+.btn-container-16 .btn-16 p .line-16 {
+    color: #fff;
+    font-size: 1.7rem;
+    font-family: 'Nunito', sans-serif;
+    text-decoration: line-through;
+}
+
+.faq .content-15 p .span-16 {
+    color: rgb(255, 0, 0);
+    font-size: 1.7rem;
+}
+
+.btn-16 {
+    display: block;
+    margin-top: 1rem;
+    padding: 2rem 3%;
+    background: rgb(255, 0, 0);
+    color: #fff;
+    font-size: 2rem;
+    text-align: center;
+    border-radius: .5rem;
+}
+
+.btn-16:hover {
+    animation: glow-11 1s infinite;
+    border-color: rgba(0, 255, 0, 1);
+}
+
+@keyframes glow-11 {
+    0% {
+        box-shadow: 0 0 10px rgba(0, 255, 0, 0);
+    }
+
+    50% {
+        box-shadow: 0 0 20px rgba(0, 255, 0, 1), 0 0 30px rgba(0, 255, 0, 1);
+    }
+
+    100% {
+        box-shadow: 0 0 10px rgba(0, 255, 0, 0);
+    }
+}
 
 
 
@@ -1559,7 +1674,7 @@ text-decoration: underline;
 
  .footer {
   border-top: 0.5rem solid var(--main-color);
-  padding-bottom: 5rem;
+  /* padding-bottom: 5rem; */
 }
 
 .footer .box-container {
@@ -1640,6 +1755,7 @@ text-decoration: underline;
   padding: 1rem 0;
   color: var(--black);
   z-index: 800; 
+
 }
 
 .call-to-action .buttons {
@@ -1804,7 +1920,7 @@ text-decoration: underline;
 /*  header-water-purifiers section starts */
 
 .header-water-purifiers {
-  padding: 2rem 0%;
+  padding: 15rem 0%;
   padding-right: 0;
   padding-bottom: 0;
 }
@@ -1825,7 +1941,7 @@ text-decoration: underline;
   width: 46%; 
 }
 
-.header-water-purifiers .swiper-slide:nth-child(2n) {
+/* .header-water-purifiers .swiper-slide:nth-child(2n) {
   scroll-behavior: smooth;
   width: 46%; 
 }
@@ -1848,7 +1964,7 @@ text-decoration: underline;
 .header-water-purifiers .swiper-slide:nth-child(6n) {
   scroll-behavior: smooth;
   width: 46%; 
-}  
+}   */
 
 /* header-water-purifiers section ends  */
 
@@ -1975,6 +2091,8 @@ text-decoration: underline;
   scroll-behavior: smooth;
   width: 46%; 
 }
+
+
 
 /* products-slider section ends here */
 }
