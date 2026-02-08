@@ -13,7 +13,6 @@ window.onscroll = () =>{
     navbar.classList.remove('active');
 }
 
-
 //  contact-popup section starts
 
 const openContactPopupButton = document.getElementById('openContactPopupButton');
@@ -31,6 +30,7 @@ contactPopup.addEventListener('click', (event) => {
 
 //  contact-popup section starts
 
+// memu btn js code ends here
 
   //  social popup box  section starts (This code for when we click on social meidia button in header section. then this box will open in popup effect) 
 
@@ -85,12 +85,6 @@ function filterOptions() {
   }
 
   // search-btn-container section ends here
-  
-
-
-
-
-  
 //  ro-service-popup section starts here 
 
   window.onload = function() {
@@ -186,3 +180,61 @@ document.querySelectorAll('.faq .box-container .box h3').forEach(headings =>{
 });
 
 // faq ends here
+
+
+// header menu section starts here    
+
+var swiper = new Swiper(".header-water-purifiers-slider", {
+  slidesPerView: "auto",
+  spaceBetween: 10,
+  loop: true, // Enable continuous loop mode
+  autoplay: {
+    delay: 0, // No delay for continuous scrolling
+    disableOnInteraction: true, // Stop autoplay on interaction
+    waitForTransition: false, // Stop immediately without waiting for transition
+  },
+  speed: 5000, // Speed of the marquee effect
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  breakpoints: {
+    2500: {
+        slidesPerView: 1,
+    },
+    2501: {
+        slidesPerView: 1,
+    },
+    2502: {
+        slidesPerView: 1,
+    },
+  },
+  // Prevent sliding on touch interaction
+  allowTouchMove: true,
+  on: {
+    touchStart: function () {
+      swiper.autoplay.stop(); // Stop autoplay immediately when touched
+    },
+    touchEnd: function () {
+      swiper.allowTouchMove = true; // Re-enable touch sliding after interaction
+    }
+  }
+});
+
+// Stop autoplay on touch and prevent sliding to the next image
+swiper.el.addEventListener('touchstart', function() {
+  swiper.autoplay.stop(); // Stop autoplay immediately on touch
+  swiper.allowTouchMove = false; // Temporarily disable touch slide
+});
+
+// Re-enable touch movement after touch is released
+swiper.el.addEventListener('touchend', function() {
+  swiper.allowTouchMove = true; // Re-enable touch slide after touch ends
+});
+
+
+// hheader-water-purifiers ends here
