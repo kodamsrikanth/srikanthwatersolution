@@ -1253,31 +1253,38 @@
 
 <!-- cities links section ends here -->
 
-<form action="https://docs.google.com/forms/d/e/1FAIpQLScfSxMGvNrHdOY5BCf32Lp8qlpog_OM-1oxMSvigzikXnVqqg/formResponse" method="POST">
+<div class="form-box">
+  <h2>Contact Information</h2>
 
-  <!-- Name -->
-  <input type="text" name="entry.2005620554" placeholder="Your Name" required><br><br>
+  <form action="https://docs.google.com/forms/d/e/1bJXwlCsv4Zci7h9hJ5nM6tIz_R8_EVaLYtC5J2MHVmw/formResponse"
+        method="POST"
+        target="hidden_iframe"
+        onsubmit="setTimeout(function(){ window.location='thankyou.html'; }, 500);">
 
-  <!-- Phone -->
-  <input type="tel" name="entry.11166974658" placeholder="Phone Number" required><br><br>
+    <input type="text" name="entry.2005620554" placeholder="Your Name" required>
 
-  <!-- Village -->
-  <select name="entry.889337160" required>
-    <option value="">Select Your Village</option>
-    <option value="Godavarikhani">Godavarikhani</option>
-    <option value="Ramagundam">Ramagundam</option>
-    <option value="NTPC">NTPC</option>
-    <option value="Centinary Colony">Centinary Colony</option>
-    <option value="Basat nagar">Basat nagar</option>
-    <option value="Mancherial">Mancherial</option>
-    <option value="Peddapalli">Peddapalli</option>
-    <option value="Manthani">Manthani</option>
-    <option value="Chennur">Chennur</option>
-  </select><br><br>
+    <input type="tel" name="entry.11166974658" placeholder="Phone number" required>
 
-  <button type="submit">Submit</button>
+    <select name="entry.889337160" required>
+      <option value="">Your Village</option>
+      <option value="Godavarikhani">Godavarikhani</option>
+      <option value="Ramagundam">Ramagundam</option>
+      <option value="NTPC">NTPC</option>
+      <option value="Centinary Colony">Centinary Colony</option>
+      <option value="Basat nagar">Basat nagar</option>
+      <option value="Mancherial">Mancherial</option>
+      <option value="Peddapalli">Peddapalli</option>
+      <option value="Manthani">Manthani</option>
+      <option value="Chennur">Chennur</option>
+    </select>
 
-</form>
+    <button type="submit">Submit</button>
+  </form>
+
+  <!-- Hidden iframe -->
+  <iframe name="hidden_iframe" style="display:none;"></iframe>
+</div>
+
 
 <!-- footer section starts -->
 
@@ -1427,4 +1434,5 @@
 </body>
 
 </html>
+
 
