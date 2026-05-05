@@ -725,8 +725,11 @@ text-align: center;
 /* header-water-purifiers section starts here */
 
 .header-water-purifiers {
-  padding: 2rem 0%;
+  /* padding: 2rem 0%; */
+  padding-top: 2rem;
   padding-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .header-water-purifiers .slide .image {
