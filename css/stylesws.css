@@ -751,6 +751,123 @@ text-align: center;
 
 /* header-water-purifiers section starts here */
 
+
+
+/* full screen center */
+.center-box {
+  /* height: 100vh; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background: #000; */
+  animation: fadeInPage 1.5s ease;
+  padding: 1.5rem 0;
+}
+
+/* button style */
+.glow-btn {
+  position: relative;
+  padding: 12px 28px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #fff;
+  background: #111;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  overflow: hidden;
+  z-index: 1;
+
+  /* entrance animation */
+  animation: zoomIn 1.2s ease, pulseGlow 2.5s infinite ease-in-out;
+}
+
+/* glowing border */
+.glow-btn::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  background: linear-gradient(
+    120deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+  background-size: 300%;
+  border-radius: 14px;
+  z-index: -2;
+  animation: glowMove 6s linear infinite;
+}
+
+/* inner layer */
+.glow-btn::after {
+  content: "";
+  position: absolute;
+  inset: 2px;
+  background: #111;
+  border-radius: 10px;
+  z-index: -1;
+  transition: 0.4s ease;
+}
+
+/* hover → full gradient */
+.glow-btn:hover::after {
+  background: transparent;
+}
+
+.glow-btn:hover {
+  color: #000;
+  font-weight: 700;
+  transform: scale(1.08);
+}
+
+/* ===== Animations ===== */
+
+/* page fade */
+@keyframes fadeInPage {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* zoom in effect */
+@keyframes zoomIn {
+  from {
+    transform: scale(0.6);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* glowing pulse */
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 10px rgba(255,255,255,0.2);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(255,255,255,0.6);
+  }
+}
+
+/* gradient movement */
+@keyframes glowMove {
+  0% { background-position: 0 0; }
+  50% { background-position: 300% 0; }
+  100% { background-position: 0 0; }
+}
+
+
+
+
+
 /* =====================================================
 1️⃣ SECTION & MAIN LAYOUT
 ===================================================== */
