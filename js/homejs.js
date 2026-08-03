@@ -1,6 +1,6 @@
 // memu btn js code starts here
 
-let menu = document.querySelector('#menu-btn');
+let menu = document.querySelector('#menu-btn')
 let navbar = document.querySelector('.menu');
 
 menu.onclick = () =>{
