@@ -109,48 +109,48 @@ function filterOptions() {
 
 //  ro-service-popup section ends here 
   
-// header menu section starts here    
+// // header menu section starts here    
 
-var swiper = new Swiper(".header-water-purifiers-slider", {
-  slidesPerView: "auto",
-  spaceBetween: 10,
-  loop: true, // Enable continuous loop mode
-  autoplay: {
-    delay: 0, // No delay for continuous scrolling
-    disableOnInteraction: true, // Stop autoplay on interaction
-    waitForTransition: false, // Stop immediately without waiting for transition
-  },
-  speed: 5000, // Speed of the marquee effect
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-  breakpoints: {
-    2500: {
-        slidesPerView: 1,
-    },
-    2501: {
-        slidesPerView: 1,
-    },
-    2502: {
-        slidesPerView: 1,
-    },
-  },
-  // Prevent sliding on touch interaction
-  allowTouchMove: true,
-  on: {
-    touchStart: function () {
-      swiper.autoplay.stop(); // Stop autoplay immediately when touched
-    },
-    touchEnd: function () {
-      swiper.allowTouchMove = true; // Re-enable touch sliding after interaction
-    }
-  }
-});
+// var swiper = new Swiper(".header-water-purifiers-slider", {
+//   slidesPerView: "auto",
+//   spaceBetween: 10,
+//   loop: true, // Enable continuous loop mode
+//   autoplay: {
+//     delay: 0, // No delay for continuous scrolling
+//     disableOnInteraction: true, // Stop autoplay on interaction
+//     waitForTransition: false, // Stop immediately without waiting for transition
+//   },
+//   speed: 5000, // Speed of the marquee effect
+//   navigation: {
+//     nextEl: ".swiper-button-next",
+//     prevEl: ".swiper-button-prev",
+//   },
+//   pagination: {
+//     el: ".swiper-pagination",
+//     clickable: true,
+//   },
+//   breakpoints: {
+//     2500: {
+//         slidesPerView: 1,
+//     },
+//     2501: {
+//         slidesPerView: 1,
+//     },
+//     2502: {
+//         slidesPerView: 1,
+//     },
+//   },
+//   // Prevent sliding on touch interaction
+//   allowTouchMove: true,
+//   on: {
+//     touchStart: function () {
+//       swiper.autoplay.stop(); // Stop autoplay immediately when touched
+//     },
+//     touchEnd: function () {
+//       swiper.allowTouchMove = true; // Re-enable touch sliding after interaction
+//     }
+//   }
+// });
 
 // Stop autoplay on touch and prevent sliding to the next image
 swiper.el.addEventListener('touchstart', function() {
